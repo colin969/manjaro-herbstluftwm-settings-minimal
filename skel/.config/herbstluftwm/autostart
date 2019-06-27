@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source config
 
 # this is a simple config for herbstluftwm
 
@@ -164,7 +165,7 @@ hc detect_monitors
 # Launch polybar
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
-    MONITOR=$monitor bash -c "polybar top &"
+    MONITOR=$monitor bash -c "polybar top"
 done
 
 # Custom Keybinds
