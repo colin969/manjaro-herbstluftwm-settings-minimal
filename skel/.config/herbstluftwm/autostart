@@ -170,7 +170,11 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
 done
 
 # Custom Keybinds
-hc keybind $Mod-d dmenu_run
+hc keybind $Mod-d spawn dmenu_run
+
+# Keybindings shortcut
+hc keybind $Mod-F1 spawn $TERMINAL -e "micro <(herbstclient list_keybinds)"
 
 # Autostart apps
+compton -b
 nitrogen --restore &
