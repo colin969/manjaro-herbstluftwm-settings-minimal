@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-source config
 
 installdir=/
 
@@ -12,6 +11,7 @@ panelcmd="${1:-$defaultpanel}"
 
 herbstclient emit_hook quit_panel
 
+killall polybar
 for monitor in $(herbstclient list_monitors | cut -d':' -f1) ; do
-    MONITOR=$monitor bash -c "polybar top"
+    "$panelcmd" $monitor &
 done

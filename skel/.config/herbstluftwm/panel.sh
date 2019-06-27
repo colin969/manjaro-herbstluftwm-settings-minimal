@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-source config
+source ~/.config/herbstluftwm/config
 
 hc() { "${herbstclient_command[@]:-herbstclient}" "$@" ;}
 
-monitor={1:-0}i
+monitor=${1:-0}
 # Height of Polybar panel
 
-hc pad $monitor $panel_height
-MONITOR=$monitor bash -c "polybar top"
+hc pad $monitor ${POLYBAR_HEIGHT}
+MONITOR=$monitor POLYBAR_HEIGHT=${POLYBAR_HEIGHT} bash -c "polybar top"
