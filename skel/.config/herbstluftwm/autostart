@@ -182,7 +182,7 @@ hc keybind $Mod-F1 spawn $TERMINAL -e "bash -c 'herbstclient list_keybinds | $ED
 compton -b
 nitrogen --restore &
 
-if hc silent new_attr bool just_started_session ; then
+if hc silent new_attr bool my_first_autostart ; then
     manjaro-hello &
     redshift-gtk &
 fi

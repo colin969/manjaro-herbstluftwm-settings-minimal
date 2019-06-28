@@ -84,6 +84,19 @@ pin-workspaces = true
 enable-click = true
 enable-scroll = true
 
+label-active = %icon% %name%
+;label-active-foreground = #ffffff
+label-active-background = #3f3f3f
+label-active-underline = #fba922
+
+label-occupied = %icon%
+label-occupied-underline = #555555
+
+label-urgent = %icon%
+;label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b0a20
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
