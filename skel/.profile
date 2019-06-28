@@ -1,3 +1,2 @@
-export TERMINAL=lxterminal
-export EDITOR=/usr/bin/micro
-alias hc="herbstclient"
+export TERMINAL=termite
+export EDITOR=micro
